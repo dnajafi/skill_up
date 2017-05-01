@@ -3,9 +3,11 @@ import database from './database';
 
 export function getInterest() {
   return dispatch => {
+    console.log('***Hit here*****');
     dispatch(getInterestRequestedAction());
     database.ref('/').once('value', snap => {
       const interest = snap.val();
+      console.log('*****', interest, '******');
       dispatch(getInterestFulfilledAction(interest))
     })
     .catch((error) => {

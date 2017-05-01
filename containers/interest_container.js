@@ -4,8 +4,9 @@ import { getInterest } from '../actions/get_interest';
 
 
 function mapStateToProps(state) {
+	console.log(state);
   return {
-    invite: state.invite
+    interest: state.interested
   };
 }
 
