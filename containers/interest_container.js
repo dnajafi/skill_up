@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
 import Interest from '../components/interest.jsx';
+import { getInterest } from '../actions/get_interest';
+
 
 function mapStateToProps(state) {
   return {
@@ -9,6 +11,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
+  	onGetInterest: () => dispatch(getInterest())
   };
 }
 
