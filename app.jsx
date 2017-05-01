@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import InviteContainer from './containers/invite_container';
+import InteredtContainer from './containers/interest_container';
 import store from './store/store';
 import "./stylesheets/main.scss";
 
 const main = (
   <Provider store={store}>
-    <InviteContainer />
+    <InteredtContainer />
   </Provider>
 );
 
