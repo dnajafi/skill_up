@@ -34,6 +34,18 @@ export function interestedReducer(state = {}, action) {
   		return newState;
   	}
 
+    case ActionTypes.AddToInterestRequested: {
+
+      return Object.assign({}, state, {
+        inProgress: true,
+        error: '',
+        success: ''
+
+      });
+
+
+    }
+
     default:
       return state;
   }
