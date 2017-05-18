@@ -5,7 +5,9 @@ const actionTypes = {
 
   AddToInterestRequested: 'ADD_TO_INTEREST_REQUESTED',
   AddToInterestRejected: 'ADD_TO_INTEREST_REJECTED',
-  AddToInterestFulfilled: 'ADD_TO_INTEREST_FULFILLED'
+  AddToInterestFulfilled: 'ADD_TO_INTEREST_FULFILLED',
+
+  GetProfileRequested: 'GET_PROFILE_REQUESTED'
 };
 
 export default actionTypes;

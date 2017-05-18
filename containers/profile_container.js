@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
-import Interest from '../components/interest.jsx';
+import Profile from '../components/profile.jsx';
 import { getInterest } from '../actions/get_interest';
-import { addToInterest } from '../actions/add_interest';
 
 
 // take redux store state and returns the props (that are related to the redux store data) that you need to pass to the presentational component to render it with the current state
@@ -16,12 +15,11 @@ function mapStateToProps(state) {
 // basically returns the callback props needed for the presentational component
 function mapDispatchToProps(dispatch) {
   return {
-  	onGetInterest: () => dispatch(getInterest()),
-  	onAddToInterest: (name) => dispatch(addToInterest(name))
+  	onGetInterest: () => dispatch(getInterest())
   };
 }
 
 // generates the container component that renders the renders the presentational component
-const interestContainer = connect(mapStateToProps, mapDispatchToProps)(Interest); // pass the presentational component that you want to wrap and pass the props to
+const profileContainer = connect(mapStateToProps, mapDispatchToProps)(Profile); // pass the presentational component that you want to wrap and pass the props to
 
-export default interestContainer;
+export default profileContainer;

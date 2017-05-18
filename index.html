@@ -1,11 +1,276 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Skill Up</title>
-  </head>
+ 
   <body>
     <div id="container"></div>
     <script src="bundle.js"></script>
   </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Skill Up</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Merriweather" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <style>
+  .about-me {
+    font-family: 'Merriweather', serif;
+    background-color: #DCDCDC;
+  }
+
+  .profile-pic {
+    position: relative;
+    left: 35px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+
+  .add-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .top-padding {
+    padding-top: 20px;
+  }
+
+  .bio-position {
+    position: relative;
+    top: 25px;
+    left: 10px;
+  }
+
+  .portfolio-section {
+    background-color: #DCDCDC;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+  }
+
+  .skills-section {
+  	background-color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+  }
+
+  .contact-me-section {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    background-color: #DCDCDC;
+  }
+
+  .about-page-section {
+    background-color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+  }
+
+  hr {
+    border: solid 2px dimgrey;
+    height: 0px;
+  }
+
+  footer {
+    background-color: #333;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    margin-top: 17px;
+  }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="navbar-header">
+            <a style="padding-left: 130px; font-family: 'Satisfy', cursive;" class="navbar-brand" href="#">Skill Up</a>
+          </div>
+        </div>
+        <div class="col-md-5">
+        </div>
+        <div class="col-md-4">
+          <ul class="nav navbar-nav">
+            <li id="button-about"><a href="#">About</a></li>
+            <li id="button-portfolio"><a href="#">Portfolio</a></li>
+            <li id="button-contact"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="container"></div>
+
+  <!--********************************* -->
+
+  <div class="row">
+  	<div class="col-md-1 top-padding"></div>
+  	<div id="portfolio" class="col-md-10 skills-section top-padding text-center">
+      Skills
+    </div>
+    <div class="col-md-1 top-padding"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 skills-section">
+      <hr style="width:50%;">
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <div class="row">
+  	<div class="col-md-1 top-padding"></div>
+  	<div class="col-md-5 skills-section top-padding text-center">
+  		<p style="font-size: 20px;">My Skills</p>
+  	</div>
+  	<div class="col-md-5 skills-section top-padding text-center">
+  		<p style="font-size: 20px;">People who are interested</p>
+  	</div>
+  	<div class="col-md-1 top-padding"></div>
+  </div>
+
+  <!--********************************* -->
+
+  <div class="row">
+    <div class="col-md-1 top-padding"></div>
+    <div id="portfolio" class="col-md-10 portfolio-section top-padding text-center">
+      Portfolio
+    </div>
+    <div class="col-md-1 top-padding"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 portfolio-section text-center">
+      <hr style="width:50%;">
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1 add-padding"></div>
+    <div class="col-md-5 add-padding portfolio-section">
+      <img src="https://i.ytimg.com/vi/HL-8WDY01TQ/maxresdefault.jpg" alt="braquet" class="img-thumbnail">
+    </div>
+    <div class="col-md-5 add-padding portfolio-section">
+      <img src="https://i.ytimg.com/vi/HL-8WDY01TQ/maxresdefault.jpg" alt="braquet" class="img-thumbnail">
+    </div>
+    <div class="col-md-1 add-padding"></div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-1 top-padding"></div>
+    <div id="contact" class="col-md-10 contact-me-section top-padding text-center">
+      Contact Me
+    </div>
+    <div class="col-md-1 top-padding"></div>
+  </div>
+
+  
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 contact-me-section text-center">
+      <hr style="width:50%;">
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5 contact-me-section">
+      <form>
+        <div class="form-group">
+          <!-- <label style="font-size: 18px;" for="input-text" class="control-label">Name</label> -->
+          <input type="text" class="form-control" id="input-text" placeholder="Name">
+          <input type="text" class="form-control" id="input-text" placeholder="Email">
+          <input type="text" class="form-control" id="input-text" placeholder="Phone Number">
+          <textarea class="form-control" id="exampleTextarea" placeholder="Message" rows="3"></textarea>
+        </div>
+      </form>
+      <p class="text-center" style="font-size: 13.5px;">Note: No spam/soliciting pour moi, merci :)</p>
+    </div>
+    <div style="font-size: 18px;" class="col-md-5 contact-me-section text-center">
+      <p>Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice Fika here in stunning San Francisco... just feel free to drop me a line anytime.</p>
+      <br>
+      <p>I promise to reply A.S.A.P.</p>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5 about-page-section text-center top-padding">
+      <p style="font-size: 18px;">ABOUT THIS PAGE</p>
+      <p style="font-size: 16px;">Made with <span class="glyphicon glyphicon-glass" aria-hidden="true"></span> and <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></p>
+      <p style="font-size: 16px;">by Blaise</p>
+    </div>
+    <div class="col-md-5 about-page-section text-center top-padding">
+      <p style="font-size: 21px;">AROUND THE WEB</p>
+      <a style="padding-bottom: 31px;" class="btn btn-social-icon btn-twitter">
+        <span class="fa fa-twitter"></span>
+        <span class="fa fa-facebook"></span>
+        <span class="fa fa-linkedin"></span>
+        <span class="fa fa-github"></span>
+      </a>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <footer class="footer text-center">
+    <p style="color: white;">Blaise © 2017. All Rights Reversed</p>
+  </footer>
+
+ 
+  
+
+
+
+
+
+  
+</body>
+<script src="bundle.js"></script>
+<script>
+
+    $("#button-about").click(function() {
+      var offset = -95; //Offset of -95px
+
+      $('html, body').animate({
+          scrollTop: $("#about").offset().top + offset
+      }, 'fast');
+    });
+
+    $("#button-portfolio").click(function() {
+      var offset = -35; //Offset of -35px
+
+      $('html, body').animate({
+          scrollTop: $("#portfolio").offset().top + offset
+      }, 'fast');
+    });
+
+    $("#button-contact").click(function() {
+      var offset = -35; //Offset of -35px
+
+      $('html, body').animate({
+          scrollTop: $("#contact").offset().top + offset
+      }, 'fast');
+    });
+</script>
+
 </html>

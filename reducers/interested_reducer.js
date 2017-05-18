@@ -16,34 +16,53 @@ export function interestedReducer(state = {}, action) {
   		});
   	}
   	case ActionTypes.GetInterestFulfilled: {
-  		const { interested, skills, teacher } = action.invite;
+  		const { interested, skills, teacher, description, image_url, motto } = action.data;
 
   		const newState = Object.assign({}, state, {
   			inProgress: false,
-  			success: '',
+  			success: 'Successfully retrieved people interested in learning your skills',
   			skills,
   			teacher,
+        description,
+        image_url,
+        motto
   		});
 
   		newState.interested = [];
   		if(interested) {
-  			newState.interested = interested.map((person) => {
-  				return person;
-  			});
+        var names = [];
+        for(var k in interested) {
+          names.push(interested[k]["name"]);
+        }
+        newState.interested = names;
   		}
   		return newState;
   	}
 
     case ActionTypes.AddToInterestRequested: {
-
       return Object.assign({}, state, {
         inProgress: true,
         error: '',
         success: ''
-
       });
+    }
 
+    case ActionTypes.AddToInterestRejected: {
+      return Object.assign({}, state, {
+        inProgress: false,
+        error: 'Error in adding guest.',
+      });
+    }
 
+    case ActionTypes.AddToInterestFulfilled: {
+      const newState = Object.assign({}, state, {
+        inProgress: false,
+        success: 'Added person who is interested in learning your skills.'
+      });
+      newState.interested = newState.interested || [];
+      newState.interested = newState.interested.slice();
+      newState.interested.push(action.interested);
+      return newState;
     }
 
     default:

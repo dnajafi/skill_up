@@ -10,16 +10,11 @@ export default class Interest extends React.Component {
   }
 
   componentDidMount() {
-  	console.log('INSIDE OF componentDidMount');
     this.props.onGetInterest();
   }
 
   render() {
-
-  	console.log(this.props);
-  	const { interested, skills, teacher } = this.props.interest;
-  	// console.log('*******');
-  	// console.log(skills);
+  	const { interested, skills, teacher } = this.props.data;
 
   	return (
   		<div>
@@ -73,9 +68,9 @@ export default class Interest extends React.Component {
   						<form>
 							  <label>
 							    Name:
-							    <input type="text" name="name" />
+							    <input type="text" name="name" onChange={e => this.setState({ name: e.target.value })} />
 							  </label>
-							  <input type="submit" value="Submit" />
+							  <input type="submit" value="Submit" onClick={() => this.props.onAddToInterest(this.state.name)} />
 							</form>
   					</div>
   				</div>

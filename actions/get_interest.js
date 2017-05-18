@@ -3,12 +3,11 @@ import database from './database';
 
 export function getInterest() {
   return dispatch => {
-    console.log('***Hit here*****');
     dispatch(getInterestRequestedAction());
     database.ref('/').once('value', snap => {
-      const interest = snap.val();
-      console.log('*****', interest, '******');
-      dispatch(getInterestFulfilledAction(interest))
+      const data = snap.val();
+      console.log('*****', data, '******');
+      dispatch(getInterestFulfilledAction(data))
     })
     .catch((error) => {
       console.log(error);
@@ -29,9 +28,9 @@ function getInterestRejectedAction() {
   }
 }
 
-function getInterestFulfilledAction(invite) {
+function getInterestFulfilledAction(data) {
   return {
     type: ActionTypes.GetInterestFulfilled,
-    invite
+    data
   };
 }
