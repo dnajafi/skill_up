@@ -17,74 +17,58 @@ export default class Interest extends React.Component {
   	const { interested, skills, teacher } = this.props.data;
 
   	return (
-  		<div>
-  			<h1>Skill Up Today</h1>
-  			<div className="bg-warning">
-  				<div className="row">
-  					<div className="col-sm-4 col-md-2">
-  						<div className="col-sm-8 col-md-10">
-              	<b>Teacher: </b>{teacher}
-            	</div>
-  					</div>
-  				</div>
-  			</div>
-  			<div className="bg-info">
-  				<div className="row">
-  					<div className="col-sm-4 col-md-2">
-  						<b>Skills offered:</b>
-  						<div className="col-sm-8 col-md-10">
-  							<ul>
-	  							{
-	  								skills ? skills.map(skill => 
-	  									{
-	  										return <li>{skill}</li>
-	  									}) : []
-	  							}
-  							</ul>
-            	</div>
-  					</div>
-  				</div>
-  			</div>
-  			<div className="bg-warning">
-  				<div className="row">
-  					<div className="col-sm-4 col-md-2">
-  						<b>People who are interested:</b>
-  						<div className="col-sm-8 col-md-10">
-  							<ul>
-  							{
-  								interested ? interested.map(person => 
-	  								{
-	  									return <li>{person}</li>
-	  								}) : []
-  							}
-  							</ul>
-            	</div>
-  					</div>
-  				</div>
-  			</div>
-  			<div className="bg-info">
-  				<div className="row">
-  					<div className="col-sm-4 col-md-2">
-  						<form>
-							  <label>
-							    Name:
-							    <input type="text" name="name" onChange={e => this.setState({ name: e.target.value })} />
-							  </label>
-							  <input type="submit" value="Submit" onClick={() => this.props.onAddToInterest(this.state.name)} />
-							</form>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
+     <div>
+        <div className="row">
+          <div className="col-md-1 top-padding"></div>
+          <div id="portfolio" className="col-md-10 skills-section top-padding text-center">
+            Skills
+          </div>
+          <div className="col-md-1 top-padding"></div>
+        </div>
+
+        
+
+        <div className="row">
+          <div className="col-md-1 top-padding"></div>
+          <div className="col-md-10 skills-section top-padding text-center">
+            <p style={{fontSize: 18}}><u>My Skills</u></p>
+          </div>
+          <div className="col-md-1 top-padding"></div>
+        </div>
+
+        <div className="row">
+          <div className="col-md-1 top-padding"></div>
+          <div className="col-md-10 skills-section text-center">
+            <ul className="skills-list">
+              {skills ? skills.map(skill => (<li><a className="skill" href="#">{skill}</a></li>)) : <li>no skills listed</li> }
+            </ul>
+          </div>
+          <div className="col-md-1 top-padding"></div>
+        </div>
+
+        <div className="row">
+          <div className="col-md-1 top-padding"></div>
+          <div className="col-md-10 skills-section top-padding text-center">
+            <p style={{fontSize: 18}}><u>People who are interested</u></p>
+          </div>
+          <div className="col-md-1 top-padding"></div>
+        </div>
+
+        <div className="row">
+          <div className="col-md-1 top-padding"></div>
+          <div className="col-md-10 skills-section text-center">
+            <ul className="skills-list">
+              <li><a className="skill" href="#">Mark Zuckerberg</a></li>
+              <li><a className="skill" href="#">Elon Musk</a></li>
+              <li><a className="skill" href="#">Sam Altman</a></li>
+            </ul>
+          </div>
+          <div className="col-md-1 top-padding"></div>
+        </div>
+      </div>
+
+  		
   	);
   }
 } 
-
-
-
-
-
-
-
-
 
