@@ -1,16 +1,18 @@
 import ActionTypes from '../constants/action_types';
 import database from './database';
 
-export function addToInterest(name) {
+export function addToInterest(name, email, phone) {
 	return dispatch => {
 		dispatch(addToInterestRequestedAction());
 		const interestedRef = database.ref('/interested');
 		
 		interestedRef.push({
-			name
+			name,
+			email,
+			phone
 		})
 		.then(() => {
-			dispatch(addToInterestFulfilledAction({ name }));
+			dispatch(addToInterestFulfilledAction({ name, email, phone }));
 		})
 		.catch((error) => {
 			dispatch(addToInterestRejectedAction());
@@ -30,9 +32,11 @@ function addToInterestRejectedAction() {
 	};
 }
 
-function addToInterestFulfilledAction(newInterest) {
+function addToInterestFulfilledAction(name, email, phone) {
 	return {
 		type: ActionTypes.AddToInterestFulfilled,
-		newInterest
+		name,
+		email,
+		phone
 	};
 }

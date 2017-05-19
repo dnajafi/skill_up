@@ -2,7 +2,7 @@
   "teacher" : "Blaise Najafi",
   "image_url": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAzrAAAAJGI2ZGFkMzRjLWM0OGQtNDc2ZC1iOWJmLTMzZmRmOWQyNGMyMQ.jpg",
   "skills": ["basketball", "drawing", "guitar"],
-  "interested": [{"name": "Elon Musk"}, {"name": "Mark Zuckerberg"}],
+  "interested": [{"name": "Elon Musk", "email": "elon@tesla.com", "phone": "602-123-2123"}, {"name": "Mark Zuckerberg", "email": "mark@facebook.com", "phone": "602-123-2123"}],
   "description": "Full-Stack Developer with an academic background in Computer Science, Physics, and Economics.",
   "motto": "Wearer of Many Hats"
 }

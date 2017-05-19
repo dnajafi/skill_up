@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import Interest from '../components/interest.jsx';
+import Skill from '../components/skills.jsx';
+import { getInterest } from '../actions/get_interest';
 import { addToInterest } from '../actions/add_interest';
 
 
@@ -15,11 +16,12 @@ function mapStateToProps(state) {
 // basically returns the callback props needed for the presentational component
 function mapDispatchToProps(dispatch) {
   return {
-  	onAddToInterest: (name, email, phone) => dispatch(addToInterest(name, email, phone))
+  	onGetInterest: () => dispatch(getInterest()),
+  	onAddToInterest: (name) => dispatch(addToInterest(name))
   };
 }
 
 // generates the container component that renders the renders the presentational component
-const interestContainer = connect(mapStateToProps, mapDispatchToProps)(Interest); // pass the presentational component that you want to wrap and pass the props to
+const skillContainer = connect(mapStateToProps, mapDispatchToProps)(Skill); // pass the presentational component that you want to wrap and pass the props to
 
-export default interestContainer;
+export default skillContainer;

@@ -50,7 +50,7 @@ export function interestedReducer(state = {}, action) {
     case ActionTypes.AddToInterestRejected: {
       return Object.assign({}, state, {
         inProgress: false,
-        error: 'Error in adding guest.',
+        error: 'Error in adding interested person.',
       });
     }
 
@@ -61,7 +61,13 @@ export function interestedReducer(state = {}, action) {
       });
       newState.interested = newState.interested || [];
       newState.interested = newState.interested.slice();
-      newState.interested.push(action.interested);
+      newState.interested.push(
+        {
+          name: action.name, 
+          email: action.email,
+          phone: action.phone
+        }
+      );
       return newState;
     }
 
